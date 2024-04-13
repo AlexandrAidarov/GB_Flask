@@ -25,8 +25,8 @@ app.include_router(router_orders.router)
 
 @app.get('/', tags=['Redirect to Swagger UI'], response_class=RedirectResponse)
 async def redirect_index():
-    return "http://127.0.0.1:8000/docs"
+    return "http://127.0.0.1:5000/docs"
 
 
 if __name__ == "__main__":
-    uvi_run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvi_run("main:app", host="127.0.0.1", port=5000, reload=True)
